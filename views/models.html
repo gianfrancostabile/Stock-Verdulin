@@ -145,13 +145,9 @@
 
   <script type="text/javascript">
     const radio_p = document.getElementById('model-p'),
-      radio_q = document.getElementById('model-q');
-
-    const table_container = document.getElementById('table-container'),
+      radio_q = document.getElementById('model-q'),
       table_p = document.getElementById('table-p'),
-      table_q = document.getElementById('table-q'),
-      table_container_height = table_container.clientHeight,
-      table_height = (table_p.style.display == 'none') ? table_p.clientHeight : table_q.clientHeight;
+      table_q = document.getElementById('table-q');
 
     function changeTable() {
       if (radio_p.checked) {
@@ -162,6 +158,7 @@
         table_q.style.display = 'table';
       }
     }
+
     changeTable();
     radio_p.addEventListener("click", changeTable);
     radio_q.addEventListener("click", changeTable);
