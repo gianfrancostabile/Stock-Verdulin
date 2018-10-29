@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./../assets/css/modifiers.css">
+  <link rel="stylesheet" href="./../assets/css/grid.css">
+  <link rel="stylesheet" href="./../assets/css/containers.css">
+  <link rel="stylesheet" href="./../assets/css/table.css">
+  <link rel="stylesheet" href="./../assets/css/forms.css">
+  <link rel="stylesheet" href="./../assets/css/buttons.css">
+  <link rel="stylesheet" href="./../assets/css/index.css">
+  <link rel="stylesheet" href="./../assets/css/fontawesome-all.min.css">
+</head>
+
+<body class="__full-height-vh">
+  <main class="__row __full-height-perc __overflow-hidden">
+    <div id="form-container" class="__col __col-3 __align-self-center">
+      <form action="" class="__card">
+        <header class="__form-header">
+          <h2 class="__title">Categoria</h2>
+          <p class="__description">Agrega una nueva categoría</p>
+        </header>
+        <div class="__form-body">
+          <div class="__form-group">
+            <label for="category_name">Nombre: </label>
+            <input id="category_name" type="text" required minlength="2" placeholder=" ">
+          </div>
+          <div class="__form-group">
+            <label for="category_description">Descripción: </label>
+            <textarea id="category_description" required minlength="20" rows="4" placeholder=" "></textarea>
+          </div>
+        </div>
+        <footer class="__form-footer __form-group-buttons">
+          <button class="__button __button-success">Agregar</button>
+          <button class="__button __button-secondary">Limpiar campos</button>
+        </footer>
+      </form>
+    </div>
+    <div class="__col __col-7">
+      <div id="table-container" class="__card __max-full-height-perc">
+        <table id="table" class="__table __full-width-perc __text-center __table-bordered __table-hoverrable">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th colspan="2">Extra</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Manzana</td>
+              <td>
+                askjdhaskhdkjsahdsakdhsadksaasdsadsakjdaskljsa
+                adsdfsdf
+                fffsdeweb
+                cvbcbvc
+              </td>
+              <td>
+                <button class="__button __button-warning __button-rounded"><i class="fas fa-pencil-alt"></i></button>
+              </td>
+              <td>
+                <button class="__button __button-danger __button-rounded"><i class="fas fa-times"></i></button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th colspan="2">Extra</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script type="text/javascript">
+    const table_container = document.getElementById('table-container'),
+      table = document.getElementById('table'),
+      table_container_height = table_container.clientHeight,
+      table_height = table.clientHeight;
+
+    if (table_container_height <= table_height) {
+      table_container.parentElement.classList.remove('__align-self-center');
+      table_container.classList.add('__overflow-scroll-y');
+    } else {
+      table_container.parentElement.classList.add('__align-self-center');
+      table_container.classList.remove('__overflow-scroll-y');
+    }
+  </script>
+
+</body>
+
+</html>
