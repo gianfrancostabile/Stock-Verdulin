@@ -11,6 +11,9 @@ input[type="submit"].__button {
   font-size: 1.05rem;
   text-transform: uppercase;
 }
+.__button:disabled:hover {
+  cursor: not-allowed;
+}
 .__button.__button-rounded { 
   min-width: 2.25rem;
   min-height: 2.25rem;
@@ -25,17 +28,17 @@ input[type="submit"].__button {
 }
 .__button.__button-secondary {
   color: white;
-  background-color: rgb(187, 187, 187);
+  background-color: rgb(161, 161, 161);
 }
 .__button.__button-secondary:hover {
-  background-color: rgb(172, 172, 172);
+  background-color: rgb(146, 146, 146);
 }
 .__button.__button-success {
   color: white;
-  background-color: rgb(57, 212, 45);
+  background-color: rgb(13, 201, 0);
 }
 .__button.__button-success:hover {
-  background-color: rgb(13, 201, 0);
+  background-color: rgb(12, 177, 0);
 }
 .__button.__button-danger {
   color: white;
@@ -43,6 +46,9 @@ input[type="submit"].__button {
 }
 .__button.__button-danger:hover {
   background-color: rgb(240, 16, 0);
+}
+.__button.__button-danger:disabled {
+  background-color: rgb(211, 14, 0);
 }
 .__button.__button-warning {
   color: rgb(255, 255, 255);
