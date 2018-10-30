@@ -105,8 +105,8 @@ export default {
       }
     },
     clean() {
-      this.name = ''
-      this.description = ''
+      this.product = ''
+      this.amount = 0
     },
   },
   created() {
